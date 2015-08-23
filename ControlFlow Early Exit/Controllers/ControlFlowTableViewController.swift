@@ -10,7 +10,6 @@ import UIKit
 
 class ControlFlowTableViewController: UITableViewController {
 
-    
     // the data for the table
     dynamic var dataArray = [Person]()
     
