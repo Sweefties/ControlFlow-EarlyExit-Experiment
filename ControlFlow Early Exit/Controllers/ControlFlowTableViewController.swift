@@ -10,7 +10,7 @@ import UIKit
 
 class ControlFlowTableViewController: UITableViewController {
 
-    // data for the table
+    // data for the table.
     dynamic var dataArray = [Person]()
     
     private enum DataLayer: Int {
