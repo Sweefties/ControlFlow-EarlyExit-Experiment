@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7E45821C1B894A68005C81D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45821B1B894A68005C81D9 /* AppDelegate.swift */; };
-		7E45821E1B894A68005C81D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45821D1B894A68005C81D9 /* ViewController.swift */; };
 		7E4582211B894A68005C81D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E45821F1B894A68005C81D9 /* Main.storyboard */; };
 		7E4582231B894A68005C81D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4582221B894A68005C81D9 /* Assets.xcassets */; };
 		7E4582261B894A68005C81D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4582241B894A68005C81D9 /* LaunchScreen.storyboard */; };
 		7E4582311B894A68005C81D9 /* ControlFlow_Early_ExitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582301B894A68005C81D9 /* ControlFlow_Early_ExitTests.swift */; };
 		7E45823C1B894A68005C81D9 /* ControlFlow_Early_ExitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E45823B1B894A68005C81D9 /* ControlFlow_Early_ExitUITests.swift */; };
+		7E45824A1B894AA0005C81D9 /* ControlFlowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582491B894AA0005C81D9 /* ControlFlowTableViewController.swift */; };
+		7E4582531B8957D8005C81D9 /* CalculateAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582521B8957D8005C81D9 /* CalculateAge.swift */; };
+		7E4582551B8963F7005C81D9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582541B8963F7005C81D9 /* Person.swift */; };
+		7E4582571B89769A005C81D9 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582561B89769A005C81D9 /* PersonViewModel.swift */; };
+		7E4582591B897715005C81D9 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4582581B897715005C81D9 /* PersonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		7E4582181B894A68005C81D9 /* ControlFlow Early Exit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ControlFlow Early Exit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E45821B1B894A68005C81D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E45821D1B894A68005C81D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E4582201B894A68005C81D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E4582221B894A68005C81D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E4582251B894A68005C81D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		7E4582371B894A68005C81D9 /* ControlFlow Early ExitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ControlFlow Early ExitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E45823B1B894A68005C81D9 /* ControlFlow_Early_ExitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFlow_Early_ExitUITests.swift; sourceTree = "<group>"; };
 		7E45823D1B894A68005C81D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E4582491B894AA0005C81D9 /* ControlFlowTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControlFlowTableViewController.swift; path = Controllers/ControlFlowTableViewController.swift; sourceTree = "<group>"; };
+		7E4582521B8957D8005C81D9 /* CalculateAge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalculateAge.swift; path = Helpers/CalculateAge.swift; sourceTree = "<group>"; };
+		7E4582541B8963F7005C81D9 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = Models/Person.swift; sourceTree = "<group>"; };
+		7E4582561B89769A005C81D9 /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonViewModel.swift; path = viewModels/PersonViewModel.swift; sourceTree = "<group>"; };
+		7E4582581B897715005C81D9 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonTableViewCell.swift; path = Views/PersonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,13 @@
 		7E45821A1B894A68005C81D9 /* ControlFlow Early Exit */ = {
 			isa = PBXGroup;
 			children = (
-				7E45821B1B894A68005C81D9 /* AppDelegate.swift */,
-				7E45821D1B894A68005C81D9 /* ViewController.swift */,
-				7E45821F1B894A68005C81D9 /* Main.storyboard */,
-				7E4582221B894A68005C81D9 /* Assets.xcassets */,
-				7E4582241B894A68005C81D9 /* LaunchScreen.storyboard */,
-				7E4582271B894A68005C81D9 /* Info.plist */,
+				7E4582511B895780005C81D9 /* Helpers */,
+				7E4582501B894FF5005C81D9 /* Models */,
+				7E45824F1B894FE7005C81D9 /* viewModels */,
+				7E45824E1B894FD6005C81D9 /* Views */,
+				7E45824C1B894FBA005C81D9 /* Root */,
+				7E45824B1B894FA9005C81D9 /* Controllers */,
+				7E45824D1B894FC5005C81D9 /* Ressources */,
 			);
 			path = "ControlFlow Early Exit";
 			sourceTree = "<group>";
@@ -123,6 +132,65 @@
 				7E45823D1B894A68005C81D9 /* Info.plist */,
 			);
 			path = "ControlFlow Early ExitUITests";
+			sourceTree = "<group>";
+		};
+		7E45824B1B894FA9005C81D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E4582491B894AA0005C81D9 /* ControlFlowTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7E45824C1B894FBA005C81D9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7E45821B1B894A68005C81D9 /* AppDelegate.swift */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		7E45824D1B894FC5005C81D9 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				7E45821F1B894A68005C81D9 /* Main.storyboard */,
+				7E4582221B894A68005C81D9 /* Assets.xcassets */,
+				7E4582241B894A68005C81D9 /* LaunchScreen.storyboard */,
+				7E4582271B894A68005C81D9 /* Info.plist */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		7E45824E1B894FD6005C81D9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E4582581B897715005C81D9 /* PersonTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7E45824F1B894FE7005C81D9 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7E4582561B89769A005C81D9 /* PersonViewModel.swift */,
+			);
+			name = viewModels;
+			sourceTree = "<group>";
+		};
+		7E4582501B894FF5005C81D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E4582541B8963F7005C81D9 /* Person.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7E4582511B895780005C81D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E4582521B8957D8005C81D9 /* CalculateAge.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E45821E1B894A68005C81D9 /* ViewController.swift in Sources */,
+				7E4582591B897715005C81D9 /* PersonTableViewCell.swift in Sources */,
+				7E45824A1B894AA0005C81D9 /* ControlFlowTableViewController.swift in Sources */,
+				7E4582571B89769A005C81D9 /* PersonViewModel.swift in Sources */,
 				7E45821C1B894A68005C81D9 /* AppDelegate.swift in Sources */,
+				7E4582551B8963F7005C81D9 /* Person.swift in Sources */,
+				7E4582531B8957D8005C81D9 /* CalculateAge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
