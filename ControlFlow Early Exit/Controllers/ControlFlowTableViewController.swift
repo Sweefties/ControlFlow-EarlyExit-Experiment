@@ -13,12 +13,12 @@ class ControlFlowTableViewController: UITableViewController {
     // data for the table.
     dynamic var dataArray = [Person]()
     
-    private enum DataLayer: Int {
-        case Manager
-        case Employees
+    fileprivate enum DataLayer: Int {
+        case manager
+        case employees
     }
     // cell
-    private let textCellIdentifier = "defaultCell"
+    fileprivate let textCellIdentifier = "defaultCell"
     
     // render
     override func viewDidLoad() {
@@ -38,28 +38,28 @@ class ControlFlowTableViewController: UITableViewController {
 private typealias TableViewDataSource = ControlFlowTableViewController
 extension TableViewDataSource {
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count ?? 0
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count 
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Control Flow - Early Exit Example with guard 'late let' example..
         let identifier: String = {
-            guard let type = DataLayer(rawValue: indexPath.row) else { return textCellIdentifier }
+            guard let type = DataLayer(rawValue: (indexPath as NSIndexPath).row) else { return textCellIdentifier }
             switch type {
-            case .Manager: return textCellIdentifier
-            case .Employees: return textCellIdentifier
+            case .manager: return textCellIdentifier
+            case .employees: return textCellIdentifier
             }
             }()
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! PersonTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! PersonTableViewCell
         
         // Now with Early Exit.
-        guard let person : Person = dataArray[indexPath.row] as Person else { print("no value") }
+        guard let person : Person = dataArray[(indexPath as NSIndexPath).row] as Person? else { print("no value") }
         
         let viewModel = PersonViewModel()
         cell.configure(withDataSource: person, delegate: viewModel)
@@ -79,7 +79,7 @@ extension TableViewDataSource {
 private typealias TableViewDelegate = ControlFlowTableViewController
 extension TableViewDelegate {
     
-    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 64.0
     }
 }

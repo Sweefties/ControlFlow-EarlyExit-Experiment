@@ -14,20 +14,20 @@ class FormattedTypeHelper {
     - parameter birthday:     The NSDate to transform.
     - returns: A new Age NSInteger with `birthday` from NSDate.
     */
-    class func calculateAge (birthday: NSDate) -> NSInteger {
+    class func calculateAge (_ birthday: Date) -> NSInteger {
         
-        let calendar : NSCalendar = NSCalendar.currentCalendar()
-        let dateComponentNow : NSDateComponents = calendar.components([.Year, .Month, .Day, .Hour], fromDate: NSDate())
-        let dateComponentBirth : NSDateComponents = calendar.components([.Year, .Month, .Day, .Hour], fromDate: birthday)
+        let calendar : Calendar = Calendar.current
+        let dateComponentNow : DateComponents = (calendar as NSCalendar).components([.year, .month, .day, .hour], from: Date())
+        let dateComponentBirth : DateComponents = (calendar as NSCalendar).components([.year, .month, .day, .hour], from: birthday)
         
-        if ( (dateComponentNow.month < dateComponentBirth.month) ||
-            ((dateComponentNow.month == dateComponentBirth.month) && (dateComponentNow.day < dateComponentBirth.day))
+        if ( (dateComponentNow.month! < dateComponentBirth.month!) ||
+            ((dateComponentNow.month! == dateComponentBirth.month!) && (dateComponentNow.day! < dateComponentBirth.day!))
             )
         {
-            return dateComponentNow.year - dateComponentBirth.year - 1
+            return dateComponentNow.year! - dateComponentBirth.year! - 1
         }
         else {
-            return dateComponentNow.year - dateComponentBirth.year
+            return dateComponentNow.year! - dateComponentBirth.year!
         }
     }
     

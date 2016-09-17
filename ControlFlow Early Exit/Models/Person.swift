@@ -17,7 +17,7 @@ class Person: NSObject {
     override init() {
         userName = "user"
         familyName = "family"
-        age = "\(NSDate())"
+        age = "\(Date())"
         super.init()
     }
     

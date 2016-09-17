@@ -21,27 +21,27 @@ protocol PersonTextCellDelegate {
 extension PersonTextCellDelegate {
     
     var ageColor: UIColor {
-        return .lightGrayColor()
+        return UIColor.lightGray
     }
     
     var textColor: UIColor {
-        return .blackColor()
+        return UIColor.black
     }
     
     var font: UIFont {
-        return .systemFontOfSize(16)
+        return .systemFont(ofSize: 16)
     }
 }
 
 
 class PersonTableViewCell: UITableViewCell {
     
-    private var delegate: PersonTextCellDelegate?
-    private var dataObject: Person?
+    fileprivate var delegate: PersonTextCellDelegate?
+    fileprivate var dataObject: Person?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.detailTextLabel?.textColor = .lightGrayColor()
+        self.detailTextLabel?.textColor = UIColor.lightGray
     }
     /**
     Configure the current Cell with data Object Model and delegate protocol.
@@ -54,9 +54,9 @@ class PersonTableViewCell: UITableViewCell {
         self.delegate = delegate
         
         let dateAsString = dataObject.age
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/M/d H:mm:ss"
-        let date = dateFormatter.dateFromString(dateAsString)
+        let date = dateFormatter.date(from: dateAsString)
         
         self.textLabel?.text = "\(dataObject.userName)" + " \(dataObject.familyName)"
         self.detailTextLabel?.text = "\(FormattedTypeHelper.calculateAge(date!)) Years"

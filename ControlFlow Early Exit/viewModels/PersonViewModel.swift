@@ -15,6 +15,6 @@ struct PersonViewModel: PersonTextCellDataSource {
 extension PersonViewModel: PersonTextCellDelegate {
     
     var ageColor: UIColor {
-        return .lightGrayColor()
+        return UIColor.lightGray
     }
 }
